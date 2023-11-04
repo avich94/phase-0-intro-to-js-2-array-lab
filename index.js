@@ -1,64 +1,44 @@
 // Write your solution here!
+
 const cats = ["Milo", "Otis", "Garfield"];
-console.log(cats);
 
-function destructivelyAppendCat(name) {
-      cats.push(name);
-  };
-  
-  destructivelyAppendCat("Ralph");
-  console.log(cats);
+function destructivelyAppendCat() {
+  destructivelyAppendCat = cats.push("Ralph");
+}
 
-function destructivelyPrependCat(name) {
-    cats.unshift(name);
+
+function destructivelyPrependCat() {
+    destructivelyPrependCat = cats.unshift("Bob");
+}
+
+function destructivelyRemoveLastCat() {
+  destructivelyRemoveLastCat = cats.pop();
+}
+
+function destructivelyRemoveFirstCat() {
+  destructivelyRemoveFirstCat = cats.shift();
+}
+
+function appendCat() {
+  const appendCat = cats.slice();
+  appendCat.push("Broom");
+  return appendCat;
+}
+
+function prependCat() {
+  const prependCat = cats.slice();
+  prependCat.unshift("Arnold");
+  return prependCat;
+}
+
+function removeLastCat() {
+const removeLastCat = cats.slice();
+removeLastCat.splice(-1,1);
+return removeLastCat;
 };
 
-destructivelyPrependCat("Bob");
-console.log(cats);
-
-function destructivelyRemoveLastCat(name) {
-    cats.pop(name);
-
-};
-
-destructivelyRemoveLastCat("Ralph");
-console.log(cats);
-
-function destructivelyRemoveFirstCat(name) {
-    cats.shift(name);
-
-};
-
-destructivelyRemoveFirstCat("Milo");
-console.log(cats);
-
-
-function appendCat(name) {
-    const newCats = [...cats, name];
-    return newCats;
-  }
-  
-  console.log(appendCat("Broom"));
-  console.log(cats);
-
-function prependCat(name) {
-    const newCats = [name,...cats];
-    return newCats;
-  }
-  
-  console.log(prependCat("Arnold"));
-  console.log(cats);
-
-  function removeLastCat() {
-    return cats.slice(0, -1);
-  }
-  
-  console.log(removeLastCat());
-  console.log(cats);
-
-  function removeFirstCat() {
-    return cats.slice(1);
-  }
-  
-  console.log(removeFirstCat());
-  console.log(cats);
+function removeFirstCat() {
+  const removeFirstCat = cats.slice();
+  removeFirstCat.splice(0,1);
+  return removeFirstCat;
+}
